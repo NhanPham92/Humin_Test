@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 24.254 sec <<< FAILURE!
+TC06(testcases.TC06)  Time elapsed: 0.533 sec  <<< FAILURE!
+java.lang.NullPointerException: null
+	at testcases.TC06.TC06(TC06.java:24)
+
