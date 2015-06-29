@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1435560300566" stop="1435560335333" version="1.4.11" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Custom suite : DDAU</name>
+    <title>Custom suite : DDAU</title>
+    <test-cases>
+        <test-case start="1435560321074" stop="1435560334422" status="passed">
+            <name>TC08</name>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="nhanphampc"/>
+                <label name="thread" value="4440@nhanphampc.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

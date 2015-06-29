@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1435544447140" stop="1435544471725" version="1.4.11" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Custom suite : DDAU</name>
+    <title>Custom suite : DDAU</title>
+    <test-cases>
+        <test-case start="1435544463828" stop="1435544471244" status="broken">
+            <name>TC06</name>
+            <failure>
+                <message>NoSuchWindowException: Window not found. The browser window may have been closed.
+Command duration or timeout: 133 milliseconds
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'nhanphampc', ip: '10.20.19.87', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_20'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=29.0, platform=WINDOWS, browserConnectionEnabled=true, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 29182409-38c8-4695-bf36-81dc43946452</message>
+                <stack-trace>org.openqa.selenium.NoSuchWindowException: Window not found. The browser window may have been closed.
+Command duration or timeout: 133 milliseconds
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'nhanphampc', ip: '10.20.19.87', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_20'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=29.0, platform=WINDOWS, browserConnectionEnabled=true, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 29182409-38c8-4695-bf36-81dc43946452
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:463)
+	at pages.LoginPage.loginToFB(LoginPage.java:99)
+	at testcases.TC06.TC06(TC06.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:125)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)
+Caused by: org.openqa.selenium.NoSuchWindowException: Window not found. The browser window may have been closed.
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'nhanphampc', ip: '10.20.19.87', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_20'
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.nsCommandProcessor.prototype.execute(file:///C:/Users/NHANPH~1.INI/AppData/Local/Temp/anonymous7591511289211915939webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12343)
+	at &lt;anonymous class&gt;.Dispatcher.executeAs/&lt;(file:///C:/Users/NHANPH~1.INI/AppData/Local/Temp/anonymous7591511289211915939webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9061)
+	at &lt;anonymous class&gt;.Resource.prototype.handle(file:///C:/Users/NHANPH~1.INI/AppData/Local/Temp/anonymous7591511289211915939webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9208)
+	at &lt;anonymous class&gt;.Dispatcher.prototype.dispatch(file:///C:/Users/NHANPH~1.INI/AppData/Local/Temp/anonymous7591511289211915939webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9155)
+	at &lt;anonymous class&gt;.WebDriverServer/&lt;.handle(file:///C:/Users/NHANPH~1.INI/AppData/Local/Temp/anonymous7591511289211915939webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:12128)
+	at &lt;anonymous class&gt;.createHandlerFunc/&lt;(file:///C:/Users/NHANPH~1.INI/AppData/Local/Temp/anonymous7591511289211915939webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:2058)
+	at &lt;anonymous class&gt;.ServerHandler.prototype.handleResponse(file:///C:/Users/NHANPH~1.INI/AppData/Local/Temp/anonymous7591511289211915939webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:2391)
+	at &lt;anonymous class&gt;.Connection.prototype.process(file:///C:/Users/NHANPH~1.INI/AppData/Local/Temp/anonymous7591511289211915939webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1227)
+	at &lt;anonymous class&gt;.RequestReader.prototype._handleResponse(file:///C:/Users/NHANPH~1.INI/AppData/Local/Temp/anonymous7591511289211915939webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1681)
+	at &lt;anonymous class&gt;.RequestReader.prototype._processBody(file:///C:/Users/NHANPH~1.INI/AppData/Local/Temp/anonymous7591511289211915939webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1529)
+	at &lt;anonymous class&gt;.RequestReader.prototype.onInputStreamReady(file:///C:/Users/NHANPH~1.INI/AppData/Local/Temp/anonymous7591511289211915939webdriver-profile/extensions/fxdriver@googlecode.com/components/httpd.js:1397)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="nhanphampc"/>
+                <label name="thread" value="7384@nhanphampc.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

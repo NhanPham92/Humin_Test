@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1435572122130" stop="1435572284648" version="1.4.11" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Custom suite : DDAU</name>
+    <title>Custom suite : DDAU</title>
+    <test-cases>
+        <test-case start="1435572137612" stop="1435572162923" status="passed">
+            <name>TC06</name>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="nhanphampc"/>
+                <label name="thread" value="9716@nhanphampc.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1435572177273" stop="1435572182650" status="passed">
+            <name>TC07</name>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="nhanphampc"/>
+                <label name="thread" value="9716@nhanphampc.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1435572196357" stop="1435572217034" status="passed">
+            <name>testLoginPage_TC01</name>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="nhanphampc"/>
+                <label name="thread" value="9716@nhanphampc.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1435572236400" stop="1435572241842" status="passed">
+            <name>testLoginPage_TC02</name>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="nhanphampc"/>
+                <label name="thread" value="9716@nhanphampc.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1435572256863" stop="1435572262016" status="passed">
+            <name>testLoginPage_TC03</name>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="nhanphampc"/>
+                <label name="thread" value="9716@nhanphampc.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1435572279084" stop="1435572284078" status="passed">
+            <name>testLoginPage_TC04</name>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="nhanphampc"/>
+                <label name="thread" value="9716@nhanphampc.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

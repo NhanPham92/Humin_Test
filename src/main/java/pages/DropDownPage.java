@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 import java.util.List;
 
@@ -13,7 +14,10 @@ import static support.Helpers.find_element;
  */
 public class DropDownPage {
     By dropDownText = By.xpath("//*[@id='food-type-text-search_listbox']/li[1]/a/div[2]/h4");
-    By dropDownList = By.id("food-type-text-search_listbox");
+    public static By dropDownList = By.xpath("//*[@id='food-type-text-search_listbox']");
+    By detailName = By.xpath("//*[@id='header']/div[2]/div/h1");
+    By detailLocation = By.xpath("//*[@id='place-address']/div/div[1]");
+    By detailImage = By.xpath("//*[@id='place-photos']/div/div[1]/div[1]/a/img");
 
     public Boolean checkDropDownPageLoaded() {
         return find_element(dropDownText).getText().equals("Dropdown List");
@@ -26,11 +30,16 @@ public class DropDownPage {
     }
 
     public void select_dropDownItems() throws InterruptedException {
-        Select select = new Select(find_element(dropDownList));
-        List<WebElement> listItem = select.getOptions();
-        for(int i = 0; i < listItem.size(); i++){
-            select.selectByIndex(i);
-            Thread.sleep(2000);
-        }
+        LoginPage loginPage= new LoginPage();
+        String nameBefore = find_element(dropDownText).getText();
+        System.out.print(nameBefore);
+        find_element(dropDownText).click();
+        loginPage.waitForAjax();
+        String nameAfter = find_element(detailName).getText();
+        System.out.print(nameAfter);
+        Assert.assertEquals(nameBefore,nameAfter);
+        loginPage.isElementPresent(detailLocation);
+        loginPage.isElementPresent(detailImage);
+
     }
 }

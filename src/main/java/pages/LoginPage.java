@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import support.Helpers;
 
 import java.util.Set;
 
@@ -11,9 +12,9 @@ import static support.Helpers.find_element;
 /**
  * Created by khanh.nguyen on 6/2/2015.
  */
-public class LoginPage {
+public class LoginPage extends Helpers {
 
-    public static WebDriver driver;
+   // public static WebDriver driver;
     /*
      *Login Page's elements
      * @loginPageTitle
@@ -21,20 +22,25 @@ public class LoginPage {
      * @password
      * @loginBtn
      */
-    By Login = By.id("buttonLoginUser");
-    By loginPageTitle = By.xpath("//*[@id='content']/div/h2");
+    public static By Login = By.id("buttonLoginUser");
     public static By username = By.xpath("//*[@name='usermail']");
     By password = By.xpath("//*[@name='password']");
     By loginBtn = By.xpath("//*[@id='form-login']/button");
-    By loginFB = By.xpath("//*[@id='buttonLoginFacebook']/a");
+    public static By loginFB = By.xpath("//*[@id='buttonLoginFacebook']/a");
     By emailFB = By.id("email");
     By passFB = By.id("pass");
-    By loginFBButton = By.id("loginbutton");
-    By Userinfo = By.id("user-info");
-    By formLogIn = By.id("form-login");
+    By loginFBButton = By.xpath("//*[@id='u_0_2']");
+    public static By Userinfo = By.xpath("//*[@id='user-info']/li[1]/a");
     By searchTextField = By.id("food-type-text-search");
-    By link = By.linkText("");
-    String nameBefore = find_element(Login).getText();
+    By cancelFB = By.xpath("//*[@id='u_0_3']");
+    By logOut =By.xpath("//*[@id='user-info']/li[4]/a");
+    public static String namePass = "maruko92";
+    public static String passPass = "123456";
+    public static String nameFail1 = "abcde";
+    public static String passFail1 ="abcde";
+    public static String nameFB ="nhan.qc2@gmail.com";
+    public static String passfb="130992";
+
 //    public Boolean loginPageLoaded() {
 //        return find_element(loginPageTitle).getText().equals("Login Page");
 //    }
@@ -81,31 +87,41 @@ public class LoginPage {
         }
     }
 
-    public void loginToFB() throws InterruptedException {
-        String parentHandle = driver.getWindowHandle();
+    public void loginToFB() {
         find_element(loginFB).click();
-        Thread.sleep(5000);
-        //String parentHandle = driver.getWindowHandle(); // get the current window handle
+        waitForAjax();
+        String parentHandle = driver.getWindowHandle(); // get the current window handle
        // find_element(loginFB).click(); // click some link that opens a new window
         Set<String> allwindows = driver.getWindowHandles();
 
         for (String winHandle : allwindows) {
-            driver.switchTo().window(winHandle); // switch focus of WebDriver to the next found window handle (that's your newly opened window)
+            driver.switchTo().window(winHandle);
+        }// switch focus of WebDriver to the next found window handle (that's your newly opened window)
             driver.manage().window().maximize();
-            WebDriverWait wait = new WebDriverWait(driver, 30);
-            wait.until(ExpectedConditions.elementToBeClickable(find_element(emailFB)));
-
-
-            find_element(emailFB).sendKeys("nhan.qc2@gmail.com");
-            find_element(passFB).sendKeys("123456");
+            find_element(emailFB).sendKeys(nameFB);
+            find_element(passFB).sendKeys(passfb);
             find_element(loginFBButton).click();
-            driver.close(); // close newly opened window when done with it
+           // driver.close(); // close newly opened window when done with it
             driver.switchTo().window(parentHandle); // switch back to the original window
         }
 
-            //  find_element(Userinfo);
-//        driver.navigate().back();
-        }
+    public void cancelLoginToFB() {
+        find_element(loginFB).click();
+        waitForAjax();
+        String parentHandle = driver.getWindowHandle(); // get the current window handle
+        // find_element(loginFB).click(); // click some link that opens a new window
+        Set<String> allwindows = driver.getWindowHandles();
+
+        for (String winHandle : allwindows) {
+            driver.switchTo().window(winHandle);
+        }// switch focus of WebDriver to the next found window handle (that's your newly opened window)
+        driver.manage().window().maximize();
+        find_element(emailFB).sendKeys("nhan.qc2@gmail.com");
+        find_element(passFB).sendKeys("130992");
+        find_element(cancelFB).click();
+        // driver.close(); // close newly opened window when done with it
+        driver.switchTo().window(parentHandle); // switch back to the original window
+    }
 
     public Boolean Exist_element(){
         try{
@@ -124,25 +140,30 @@ public class LoginPage {
             return true;
         }
     }
-    public Boolean isElementPresent(By locator)
-    {
+    public Boolean isElementPresent(By locator) {
+        waitForAjax();
         try {
-            if(find_element(locator).isDisplayed()){
+            if (find_element(locator).isDisplayed()) {
                 System.out.println("Element display");
                 return true;
             }
+                System.out.println("Element not display");
+                return false;
+        } catch (NoSuchElementException ex) {
             System.out.println("Element not display");
             return false;
-        } catch (NoSuchElementException ex){
-            System.out.println("Element not display");
-            return false;
+        }
     }
+    public void Search(String name)
 
-    }
-    public void Search()
     {
-        find_element(searchTextField).sendKeys("xoi");
+        waitForAjax();
+        find_element(searchTextField).sendKeys(name);
+        waitForAjax();
     }
 
-
+    public void Logout()
+    {   waitForAjax();
+        find_element(logOut).click();
+    }
 }
